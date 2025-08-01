@@ -14,7 +14,7 @@ void StageScene::Initialize() {
 
 void StageScene::Update(char* keys, char* preKeys) {
     // 示例：按空格键切换到 CLEAR 场景
-    if (keys[DIK_SPACE] && !preKeys[DIK_SPACE]) {
+    if (keys[DIK_RETURN] && !preKeys[DIK_RETURN]) {
         TransitionTo(CLEAR);
     }
 

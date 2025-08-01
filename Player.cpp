@@ -8,7 +8,7 @@ void Player::Initialize() {
 }
 
 
-void Player::Update() {}
+void Player::Update() { UpdateBullets(); }
 
 //描画
 void Player::Draw() {
@@ -60,8 +60,8 @@ void Player::LoadResource() {
 	playergraphL[1] = Novice::LoadTexture("./images/player/UMARINER2.png");
 	playergraphL[2] = Novice::LoadTexture("./images/player/UMARINER3.png");
 	playergraphL[3] = Novice::LoadTexture("./images/player/UMARINER4.png");
-    bulletGraphBlade_ = Novice::LoadTexture("./images/bullet/blade.png");
-    bulletGraphBall_ = Novice::LoadTexture("./images/bullet/ball.png");
+    bulletGraphBlade_ = Novice::LoadTexture("./images/player/flyblade.png");
+    bulletGraphBall_ = Novice::LoadTexture("./images/player/fireball.png");
 }
 
 void Player::FireBullets() {
@@ -98,6 +98,6 @@ void Player::UpdateBullets() {
 void Player::DrawBullets() {
     std::lock_guard<std::mutex> lock(bulletsMutex_);
     for (auto& bullet : bullets_) {
-        bullet->Draw();
+        bullet->Draw(bulletGraphBlade_, bulletGraphBall_);
     }
 }

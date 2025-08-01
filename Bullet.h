@@ -10,7 +10,7 @@ public:
     Bullet(Vector2 pos, Type type, float speed);
     void Update();
     bool IsActive() const { return isActive_; }
-
+    void Draw(int bladeTexture, int ballTexture) const;
 
 private:
     Vector2 pos_;
