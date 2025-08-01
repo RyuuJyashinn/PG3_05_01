@@ -13,9 +13,11 @@ public:
         delete inputHandler_;
         delete player_;
     }
+    void LoadResource();
 
 private:
     InputHandler* inputHandler_ = nullptr;
     ICommand* iCommand_ = nullptr;
     Player* player_ = nullptr;
+    int stageGraph_ = 0;
 };

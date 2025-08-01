@@ -31,3 +31,20 @@ public:
 }; 
 
 
+class MoveUpCommand : public ICommand {
+public:
+
+	/// ICommandクラスを継承した実行関数
+	void Execute(Player& player) override;
+};
+
+//コマンドクラスを継承した左移動クラス
+class MoveDownCommand : public ICommand {
+public:
+
+	/// 実行(継承)
+	void Execute(Player& player) override;
+};
+
+
+

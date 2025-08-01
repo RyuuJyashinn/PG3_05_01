@@ -11,8 +11,19 @@ ICommand* InputHandler::HandleInput() {
 		return pressKeyD_;
 	}
 
+
+	if (Novice::CheckHitKey(DIK_W)) {
+		return pressKeyW_;
+	}
+
+	if (Novice::CheckHitKey(DIK_S)) {
+		return pressKeyS_;
+	}
+
 	return nullptr;
 }
+
+
 
 //Aキー押されて左移動コマンド発生
 void InputHandler::AssignMoveLeftCommand2PressKeyA() {
@@ -22,8 +33,23 @@ void InputHandler::AssignMoveLeftCommand2PressKeyA() {
 }
 
 //Dキー押されて右移動コマンド発生
-void InputHandler::AssignMoveLeftCommand2PressKeyD() {
+void InputHandler::AssignMoveRightCommand2PressKeyD() {
 
 	ICommand* command = new MoveRightCommand();
 	this->pressKeyD_ = command;
 }
+
+
+void InputHandler::AssignMoveUpCommand2PressKeyW() {
+
+	ICommand* command = new MoveUpCommand();
+	this->pressKeyW_ = command;
+}
+
+void InputHandler::AssignMoveDownCommand2PressKeyS() {
+
+	ICommand* command = new MoveDownCommand();
+	this->pressKeyS_ = command;
+}
+
+

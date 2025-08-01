@@ -38,6 +38,9 @@
     <Filter Include="ClearScene">
       <UniqueIdentifier>{db5ef521-6d94-4e16-bbb3-9089e6a09138}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Bullet">
+      <UniqueIdentifier>{4fa9e2e5-e95b-4187-9260-6ae02aff2d7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -67,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="ClearScene.cpp">
       <Filter>ClearScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Bullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="ClearScene.h">
       <Filter>ClearScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Bullet</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

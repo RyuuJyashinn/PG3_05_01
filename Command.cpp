@@ -12,3 +12,14 @@ void MoveLeftCommand::Execute(Player& player) {
 
 	player.MoveLeft();
 }
+
+
+void MoveUpCommand::Execute(Player& player) {
+
+	player.MoveUp();
+}
+
+void MoveDownCommand::Execute(Player& player) {
+
+	player.MoveDown();
+}
